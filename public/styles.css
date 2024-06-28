@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Alternate Gothic Cond ATF Bold';
+    src: url('fonts/AlternateGotNo3D.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #191d28;
+    color: #fff;
+    font-family: 'Alternate Gothic Cond ATF Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 4em;
+    color:#40c4c4;
+}
+
+.currency-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.currency-btn, .buy-btn {
+    background-color: #282c34;
+    border: none;
+    color: #40c4c4;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.buy-btn {
+    background-color: #40c4c4;
+    color: #121212;
+    border-radius: 5px;
+}
+
+.connect-telegram {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.indicator {
+    background-color: #40c4c4;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-btn {
+    background-color: #40c4c4;
+    color: #121212; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #40c4c4;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-change span {
+    font-size: 1.5em;
+    display: block;
+}
+
+.best-price {
+    text-align: center;
+}
+
+.best-price h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.price-table {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #3a3f47;
+}
+
+th {
+    text-align: center;
+}
+
+td img.platform-logo {
+    vertical-align: middle;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.positive {
+    color: #40c4c4;
+}
+
+.negative {
+    color: #ff3860;
+}
