@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const app = document.getElementById("app");
       app.innerHTML = "";
       const table = document.createElement("table");
-      // alert("Page refreshed");
       const header = `
         <tr>
           <th>#</th>
@@ -36,14 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${ticker.name}</td>
             <td>${"₹" + Number(ticker.last).toFixed(2)}</td>
             <td>${"₹" + ticker.buy + "  /  ₹" + ticker.sell}</td>
-            <td class="${(ticker.sell - ticker.buy)/100 > 0 ? 'positive' : 'negative'}">${(ticker.sell - ticker.buy) / 100 > 0 ? "" : "- "}${Number((ticker.sell - ticker.buy) / 100).toFixed(2) + " %"}</td>
+            <td class="${(ticker.sell - ticker.buy) / 100 > 0 ? 'positive' : 'negative'}">${(ticker.sell - ticker.buy) / 100 > 0 ? "" : "- "}${Number((ticker.sell - ticker.buy) / 100).toFixed(2) + " %"}</td>
             <td class="${(ticker.sell - ticker.buy) > 0 ? 'positive' : 'negative'}">${(ticker.sell - ticker.buy) > 0 ? '▲' : '▼'}${"₹" + Number(ticker.sell - ticker.buy).toFixed(2)}</td>
           </tr>
         `;
         table.innerHTML += row;
       });
-
-      // <td class="${profitLoss >= 0 ? 'positive' : 'negative'}">₹${Math.abs(profitLoss).toFixed(2)} ${profitLoss >= 0 ? '▲' : '▼'}</td>
 
       app.appendChild(table);
 
@@ -55,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let count = 60;
   const updateTimer = () => {
     const timerDisplay = document.getElementById("indicator");
-    
-    if (timerDisplay) { 
+
+    if (timerDisplay) {
       timerDisplay.textContent = count + " seconds remaining";
       count--;
       if (count == 0) {
@@ -66,8 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   fetchAndRender();
-  setInterval(fetchAndRender, 60000); 
-  setInterval(updateTimer, 1000); 
+  setInterval(fetchAndRender, 60000);
+  setInterval(updateTimer, 1000);
 });
 
 

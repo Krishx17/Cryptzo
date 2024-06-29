@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <title>HodlInfo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -15,14 +16,20 @@
             <div class="currency-selection">
                 <button class="currency-btn">INR ▼</button>
                 <button class="currency-btn">BTC ▼</button>
-                <button class="buy-btn">BUY BTC</button>
+                <a href='https://wazirx.com/signup'>
+                    <button class="currency-btn">
+                        Buy BTC</button>
+                </a>
             </div>
             <div class="connect-telegram">
                 <div id="indicator">
                     60 seconds remaining
                 </div>
-                <button class="connect-btn">
-                  Connect Telegram</button>
+                <a href='https://hodlinfo.com/connect/telegram'>
+                    <button class="connect-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Connect Telegram</button>
+                </a>
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider"></span>
@@ -40,7 +47,7 @@
                     <p class="sub-info">1 Hour</p>
                 </div>
                 <div class="best-price">
-                        <h2 id="best-price-info"></h2>
+                    <h2 id="best-price-info"></h2>
                     <p class="sub-info">Average BTC/INR net price including commission</p>
                 </div>
                 <div class="price-change">
@@ -54,15 +61,16 @@
             </div>
             <div id="app"></div>
         </main>
-    </div>
-    <div class="bottom">
-        <p>Copyright © 2019</p>
-        <p>HodlInfo.com</p>
-        <p>Support</p>
+        <div class="bottom">
+            <p>Copyright © 2019</p>
+            <p>HodlInfo.com</p>
+            <p>Support</p>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
 <footer class="fixed-footer">
-  <button class="add-home-btn">Add HodlInfo to homescreen</button>
+    <button class="add-home-btn">Add HodlInfo to homescreen</button>
 </footer>
+
 </html>

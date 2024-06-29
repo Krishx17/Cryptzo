@@ -3,14 +3,15 @@
     src: url('fonts/AlternateGotNo3D.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-}
-
-* {
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-}
-
-body, html {
+  }
+  
+  body,
+  html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -19,24 +20,13 @@ body, html {
     background-color: #191d28;
     color: #fff;
     font-family: 'Alternate Gothic Cond ATF Bold', sans-serif;
-}
-
-.bottom {
-    margin-bottom : 6rem;
-}
-/* 
-body, html {
-    background-color: #191d28;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Alternate Gothic Cond ATF Bold', sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-} */
-
-.add-home-btn {
+  }
+  
+  .bottom {
+    margin-bottom: 6rem;
+  }
+  
+  .add-home-btn {
     background-color: #191d28;
     border: 1px solid #40c4c4;
     border-radius: 5px;
@@ -44,66 +34,66 @@ body, html {
     cursor: pointer;
     font-size: 1em;
     padding: 10px 20px;
-}
-
-.bottom {
+  }
+  
+  .bottom {
     width: 100%;
     background-color: #191d28;
-    color: #fff;
+    color: #88848c;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-}
-
-.bottom p {
+    border: 2px solid #88848c;
+    padding: 1em;
+  }
+  
+  .bottom p {
     margin: 0;
     padding: 0 20px;
-}
-
-.best-price {
+  }
+  
+  .best-price {
     text-align: center;
-}
-
-.best-price h2 {
+  }
+  
+  .best-price h2 {
     font-size: 3em;
     margin: 0;
-}
-
-body {
+  }
+  
+  body {
     margin: 0;
     padding: 0;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     flex: 1;
     margin: 0 auto;
     padding: 20px 0;
     width: 90%;
-}
-
-.connect-btn {
+  }
+  
+  .connect-btn {
     background-color: #40c4c4;
     border: none;
     border-radius: 5px;
     color: #ffff;
     cursor: pointer;
     padding: 10px 20px;
-}
-
-.connect-telegram {
+  }
+  
+  .connect-telegram {
     align-items: center;
     color: #ffff;
     display: flex;
     font-weight: bold;
     gap: 10px;
-}
-
-.currency-btn, .buy-btn {
+  }
+  
+  .currency-btn,
+  .buy-btn {
     background-color: #2e3241;
     border: none;
     color: #ffff;
@@ -111,42 +101,42 @@ body {
     font-size: 1em;
     padding: 10px 20px;
     border-radius: 10px;
-}
-
-.currency-selection {
+  }
+  
+  .currency-selection {
     display: flex;
     gap: 10px;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #333;
     bottom: 0;
     color: white;
-    height: 40px; /* Set a specific height for the footer */
+    height: 40px;
     left: 0;
     padding: 10px 0;
     position: fixed;
     text-align: center;
     width: 100%;
-}
-
-.fixed-footer {
+  }
+  
+  .fixed-footer {
     background-color: #191d28;
-}
-
-header {
+  }
+  
+  header {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-}
-
-h1 {
+  }
+  
+  h1 {
     color: #40c4c4;
     font-size: 3rem;
-}
-
-.indicator {
+  }
+  
+  .indicator {
     align-items: center;
     background-color: #ff6347;
     border-radius: 50%;
@@ -157,61 +147,61 @@ h1 {
     padding: 10px;
     text-align: center;
     width: 40px;
-}
-
-.info {
+  }
+  
+  .info {
     color: #40c4c4;
-}
-
-main {
+  }
+  
+  main {
     flex: 1;
-    padding-bottom: 60px; /* Height of the footer */
-}
-
-.negative {
+  }
+  
+  .negative {
     color: #ff3860;
-}
-
-.positive {
+  }
+  
+  .positive {
     color: #40c4c4;
-}
-
-.price-change span {
+  }
+  
+  .price-change span {
     display: block;
     font-size: 1.5em;
-}
-
-.price-info {
+  }
+  
+  .price-info {
     align-items: center;
     display: flex;
     font-size: 1.7em;
     justify-content: space-around;
     margin-bottom: 20px;
     text-align: center;
-}
-
-.price-table {
     width: 100%;
-}
-
-.sub-info {
+  }
+  
+  .price-table {
+    width: 100%;
+  }
+  
+  .sub-info {
     color: #88848c;
-}
-
-.switch {
+  }
+  
+  .switch {
     display: inline-block;
     height: 20px;
     position: relative;
     width: 34px;
-}
-
-.switch input {
+  }
+  
+  .switch input {
     height: 0;
     opacity: 0;
     width: 0;
-}
-
-.slider {
+  }
+  
+  .slider {
     background-color: #ccc;
     border-radius: 20px;
     bottom: 0;
@@ -221,9 +211,9 @@ main {
     right: 0;
     top: 0;
     transition: .4s;
-}
-
-.slider:before {
+  }
+  
+  .slider:before {
     background-color: white;
     border-radius: 50%;
     bottom: 3px;
@@ -233,47 +223,48 @@ main {
     position: absolute;
     transition: .4s;
     width: 14px;
-}
-
-input:checked + .slider {
+  }
+  
+  input:checked+.slider {
     background-color: #40c4c4;
-}
-
-input:checked + .slider:before {
+  }
+  
+  input:checked+.slider:before {
     transform: translateX(14px);
-}
-
-table {
+  }
+  
+  table {
     border-collapse: collapse;
-    border-radius: 10px; /* Rounding the table edges */
+    border-radius: 10px;
     border-spacing: 0 10px !important;
     font-size: 1.7em;
     margin: 20px 0;
     overflow: hidden;
     width: 100%;
-}
-
-td {
+  }
+  
+  td {
     background-color: #2e3241;
     border: 1px solid #2e3241;
     padding: 8px;
-    text-align: center; /* Center align text in table cells */
-}
-
-td img.platform-logo {
+    text-align: center;
+    /* Center align text in table cells */
+  }
+  
+  td img.platform-logo {
     margin-right: 10px;
     vertical-align: middle;
     width: 24px;
-}
-
-th {
+  }
+  
+  th {
     background-color: #191d28;
     color: #88848c;
     padding: 10px;
     padding-top: 2em;
     text-align: center;
-}
-
-#best-price-info p{
-    font-size:1rem;
-}
+  }
+  
+  #best-price-info p {
+    font-size: 1rem;
+  }
