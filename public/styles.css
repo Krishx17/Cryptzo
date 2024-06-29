@@ -9,13 +9,22 @@
     margin: 0;
     padding: 0;
 }
+
+/** color classes **/
+.sub-info {
+    color : #88848c;
+}
+
+.info {
+    color:#40c4c4;
+}
+
 body {
     background-color: #191d28;
     color: #fff;
     font-family: 'Alternate Gothic Cond ATF Bold', sans-serif;
     margin: 0;
     padding: 0;
-    font-size: 1.3em;
 }
 
 .container {
@@ -32,7 +41,7 @@ header {
 }
 
 h1 {
-    font-size: 4em !important;
+    font-size: 3rem;
     color:#40c4c4;
 }
 
@@ -61,6 +70,7 @@ h1 {
     align-items: center;
     gap: 10px;
     color: #ffff;
+    font-weight: bold;
 }
 
 .indicator {
@@ -135,6 +145,20 @@ input:checked + .slider:before {
     align-items: center;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.7em;
+}
+
+.indicator {
+    background-color: #ff6347;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .price-change span {
@@ -160,6 +184,7 @@ input:checked + .slider:before {
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 1.7em;
 }
 
 th, td {
@@ -170,6 +195,8 @@ th, td {
 
 th {
     text-align: center;
+    color : #88848c;
+    padding-top: 2em;
 }
 
 td img.platform-logo {
@@ -185,3 +212,70 @@ td img.platform-logo {
 .negative {
     color: #ff3860;
 }
+
+.add-home-btn {
+    background-color: #191d28;
+    border:1px solid #40c4c4;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #40c4c4;
+    border-radius: 5px;
+}
+
+.fixed-footer {
+    background-color: #191d28;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 60px; /* Height of the footer */
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    height: 40px; /* Set a specific height for the footer */
+}
+
+table {
+    width: 100%;
+        /* border-collapse:separate; */
+        border-spacing: 0 10px !important;
+    margin: 20px 0;
+    border-radius: 10px; /* Rounding the table edges */
+    overflow: hidden;
+}
+
+td {
+    border: 1px solid #2e3241;
+    background-color: #2e3241;
+    padding: 8px;
+    text-align: center; /* Center align text in table cells */
+}
+
+th {
+    background-color: #191d28;
+}
+
+

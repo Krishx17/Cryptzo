@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HODLINFO Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>HodlInfo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -17,7 +49,8 @@
             </div>
             <div class="connect-telegram">
                 <div class="indicator">49</div>
-                <button class="connect-btn">Connect Telegram</button>
+                <button class="connect-btn">
+                  Connect Telegram</button>
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider"></span>
@@ -27,90 +60,37 @@
         <main>
             <div class="price-info">
                 <div class="price-change">
-                    <span>0.93 %</span>
-                    <p>5 Mins</p>
+                    <span class="info">0.93 %</span>
+                    <p class="sub-info">5 Mins</p>
                 </div>
                 <div class="price-change">
-                    <span>1.7 %</span>
-                    <p>1 Hour</p>
+                    <span class="info">1.7 %</span>
+                    <p class="sub-info">1 Hour</p>
                 </div>
                 <div class="best-price">
                     <h2>₹ 53,17,399</h2>
-                    <p>Average BTC/INR net price including commission</p>
+                    <p class="sub-info">Average BTC/INR net price including commission</p>
                 </div>
                 <div class="price-change">
-                    <span>11.05 %</span>
-                    <p>1 Day</p>
+                    <span class="info">11.05 %</span>
+                    <p class="sub-info">1 Day</p>
                 </div>
                 <div class="price-change">
-                    <span>15.84 %</span>
-                    <p>7 Days</p>
+                    <span class="info">15.84 %</span>
+                    <p class="sub-info">7 Days</p>
                 </div>
             </div>
             <div id="app"></div>
-  <script src="app.js"></script>
-            <!-- <div class="price-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Platform</th>
-                            <th>Last Traded Price</th>
-                            <th>Buy / Sell Price</th>
-                            <th>Difference</th>
-                            <th>Savings</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><img src="wazirx.png" alt="WazirX" class="platform-logo"> WazirX</td>
-                            <td>₹ 54,79,539</td>
-                            <td>₹ 54,50,000 / ₹ 54,79,538</td>
-                            <td class="positive">3.05 %</td>
-                            <td class="positive">▲ ₹ 1,62,139</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><img src="bitbns.png" alt="Bitbns" class="platform-logo"> Bitbns</td>
-                            <td>₹ 50,52,159</td>
-                            <td>₹ 50,50,000 / ₹ 50,52,206</td>
-                            <td class="negative">-4.99 %</td>
-                            <td class="negative">▼ ₹ 2,65,239</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
         </main>
     </div>
-</body>
-</html>
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Hodlinfo Clone</title>
-</head>
-<body>
-  <div class="title">
-    <span>HODLINFO</span>
-    <div>
-      
+    <div class="bottom">
+      <p>Copyright © 2019</p>
+       <p> HodlInfo.com</p>
+       <p>Support</p>
     </div>
-  </div>
-  <div id="app"></div>
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
-<footer>
-  <div class="footer">
-    <h6>copyright 2019</h6>
-    <h6>HodlInfol.com</h6>
-    <h6>Support</h6>
-  </div>
+<footer class="fixed-footer">
+  <button class="add-home-btn">Add HodlInfo to homescreen</button>
 </footer>
-</html> -->
+</html>
