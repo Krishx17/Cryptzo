@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchAndRender();
   setInterval(fetchAndRender, 60000);
-  setInterval(updateTimer, 1000);
+  setInterval(updateTimer,  1000);
 });
 
 const modeSwitch = document.getElementById('modeSwitch');
