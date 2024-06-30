@@ -10,6 +10,11 @@
     padding: 0;
   }
   
+  .light-mode .container {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
   body,
   html {
     margin: 0;
@@ -153,6 +158,27 @@
     color: #40c4c4;
   }
   
+  #loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #40c4c4;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    display: none;
+  }
+
+  @keyframes spin {
+      0% {
+          transform: rotate(0deg);
+      }
+
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
   main {
     flex: 1;
   }
@@ -264,7 +290,4 @@
     padding-top: 2em;
     text-align: center;
   }
-  
-  #best-price-info p {
-    font-size: 1rem;
-  }
+ 

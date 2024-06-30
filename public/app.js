@@ -1,14 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function showLoader() {
+		//show loader when data is loading
+		document.getElementById('loader').style.display = 'block';
+
+	}
+	function   hideLoader() {
+		//hide loader when data is loaded
+		document.getElementById('loader').style.display = 'none';
+	}
   const fetchAndRender = async () => {
     try {
+      showLoader();
       const response = await fetch("http://localhost:3009/api/tickers");
-      // console.log(response)
+      // console.log(response);
       if (!response.ok) {
         throw new Error(`HTTP error! status ${response.status}`);
       }
+      hideLoader();
       const tickers = await response.json();
       // console.log(response);
-      console.log(tickers);
+      // console.log(tickers);
       const bestPrice = document.getElementById("best-price-info");
       const avgBuy = tickers[0].buy;
       bestPrice.innerHTML = "₹" + avgBuy;
@@ -67,4 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateTimer, 1000);
 });
 
+const modeSwitch = document.getElementById('modeSwitch');
+modeSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('light-mode');
+});
 
