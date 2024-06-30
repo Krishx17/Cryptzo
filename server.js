@@ -2,21 +2,27 @@ const express = require("express");
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const { Sequelize, DataTypes } = require("sequelize");
+require('dotenv').config();
 
 const app = express();
 const port = 3009;
-
 //Middleware
 app.use(bodyParser.json());
 app.use("/home", express.static(__dirname + "/public")); 
 
-//Database setup
-const sequelize = new Sequelize(
-  "postgres://postgres:Jaishridev009@localhost:5432/hodlinfo",
-  {
-    dialect: "postgres",
-  },
-);
+const isProduction = process.env.NODE_ENV === 'production';
+const databaseUrl = process.env.DATABASE_URL || "postgres://postgres:Jaishridev009@localhost:5432/hodlinfo";
+
+const sequelize = new Sequelize(databaseUrl, {
+  dialect: 'postgres',
+  protocol: 'postgres',
+  dialectOptions: isProduction ? {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  } : {}
+});
 
 const Ticker = sequelize.define("Ticker", {
   name: { type: DataTypes.STRING },
