@@ -66,7 +66,7 @@ const fetchData = async () => {
   }
 };
 
-app.get("https://quad-b-pink.vercel.app/api/tickers", async (req, res) => {
+app.get("/api/tickers", async (req, res) => {
   try {
     const tickers = await Ticker.findAll();
     console.log(tickers);
