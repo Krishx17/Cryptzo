@@ -70,6 +70,7 @@ app.get("https://quad-b-pink.vercel.app/api/tickers", async (req, res) => {
   try {
     const tickers = await Ticker.findAll();
     console.log(tickers);
+    console.log(process.env.DATABASE_URL);
     res.send(tickers);
   } catch (err) {
     console.log(err);
