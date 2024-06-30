@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.getElementById('loader').style.display = 'none';
 	}
   const fetchAndRender = async () => {
-    try {
+    try { 
       showLoader();
       const response = await fetch("https://quad-b-pink.vercel.app/api/tickers");
-      // console.log(response);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status ${response.status}`);
-      }
+    } catch (err) {
+      console.error("Error fetching tickers : ", err);
+    }
+    
       hideLoader();
       const tickers = await response.json();
       // console.log(response);
@@ -54,10 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       app.appendChild(table);
-
-    } catch (err) {
-      console.error("Error fetching tickers : ", err);
-    }
   };
 
   let count = 60;
