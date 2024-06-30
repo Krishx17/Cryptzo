@@ -69,8 +69,10 @@ const fetchData = async () => {
 app.get("/api/tickers", async (req, res) => {
   try {
     const tickers = await Ticker.findAll();
+    console.log(tickers);
     res.send(tickers);
   } catch (err) {
+    console.log(err);
     res.status(500).send("Error fetching data");
   }
 });
