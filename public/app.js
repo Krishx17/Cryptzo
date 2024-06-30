@@ -1,31 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
   function showLoader() {
-		//show loader when data is loading
-		document.getElementById('loader').style.display = 'block';
+    // Show loader when data is loading
+    document.getElementById('loader').style.display = 'block';
+  }
 
-	}
-	function   hideLoader() {
-		//hide loader when data is loaded
-		document.getElementById('loader').style.display = 'none';
-	}
+  function hideLoader() {
+    // Hide loader when data is loaded
+    document.getElementById('loader').style.display = 'none';
+  }
+
   const fetchAndRender = async () => {
-    try { 
+    try {
       showLoader();
       const response = await fetch("/api/tickers");
-      // console.log(response);
+
       if (!response.ok) {
         throw new Error(`HTTP error! status ${response.status}`);
       }
+
       hideLoader();
       const tickers = await response.json();
-      // console.log(response);
-      // console.log(tickers);
+
       const bestPrice = document.getElementById("best-price-info");
       const avgBuy = tickers[0].buy;
       bestPrice.innerHTML = "₹" + avgBuy;
 
       const app = document.getElementById("app");
       app.innerHTML = "";
+
       const table = document.createElement("table");
       const header = `
         <tr>
@@ -46,17 +48,20 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${ticker.name}</td>
             <td>${"₹" + Number(ticker.last).toFixed(2)}</td>
             <td>${"₹" + ticker.buy + "  /  ₹" + ticker.sell}</td>
-            <td class="${(ticker.sell - ticker.buy) / 100 > 0 ? 'positive' : 'negative'}">${(ticker.sell - ticker.buy) / 100 > 0 ? "" : "- "}${Number((ticker.sell - ticker.buy) / 100).toFixed(2) + " %"}</td>
-            <td class="${(ticker.sell - ticker.buy) > 0 ? 'positive' : 'negative'}">${(ticker.sell - ticker.buy) > 0 ? '▲' : '▼'}${"₹" + Number(ticker.sell - ticker.buy).toFixed(2)}</td>
+            <td class="${(ticker.sell - ticker.buy) / 100 > 0 ? 'positive' : 'negative'}">
+              ${(ticker.sell - ticker.buy) / 100 > 0 ? "" : "- "}${Number((ticker.sell - ticker.buy) / 100).toFixed(2) + " %"}
+            </td>
+            <td class="${(ticker.sell - ticker.buy) > 0 ? 'positive' : 'negative'}">
+              ${(ticker.sell - ticker.buy) > 0 ? '▲' : '▼'}${"₹" + Number(ticker.sell - ticker.buy).toFixed(2)}
+            </td>
           </tr>
         `;
         table.innerHTML += row;
       });
 
       app.appendChild(table);
-
     } catch (err) {
-      console.error("Error fetching tickers : ", err);
+      console.error("Error fetching tickers:", err);
     }
   };
 
@@ -67,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (timerDisplay) {
       timerDisplay.textContent = count + " seconds remaining";
       count--;
-      if (count == 0) {
+      if (count === 0) {
         count = 60;
       }
     }
@@ -80,6 +85,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const modeSwitch = document.getElementById('modeSwitch');
 modeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('light-mode');
+  document.body.classList.toggle('light-mode');
 });
-
