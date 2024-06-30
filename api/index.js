@@ -9,9 +9,9 @@ const app = express();
 const port = 3009;
 
 //Middlewares
+app.use(cors());
 app.use(bodyParser.json());
 app.use("/", express.static(__dirname + "/public")); 
-app.use(cors());
 
 const isProduction = process.env.NODE_ENV === 'production';
 const databaseUrl = process.env.DATABASE_URL || process.env.LOCAL_DATABASE_URL;
