@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fetchAndRender = async () => {
     try {
       showLoader();
-      const response = await fetch("/api/tickers");
+      const response = await fetch("https://quad-b-pink.vercel.app/api/tickers");
       // console.log(response);
       if (!response.ok) {
         throw new Error(`HTTP error! status ${response.status}`);
