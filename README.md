@@ -1,6 +1,7 @@
 <h1 align="center">QuadB Tech HODLINFO 🧮🚀
 </h1>
 <p align="center"><i>Now get all the crypto related information on a single platform</i></p>
+
 <br>
 <p align="center"><i>Loved the project? Please take a look at my <a href="https://bio.link/rudy45kc">Portfolio</a></i></p>
 <p align="center"><i>Looking forward to working with you QuadB Tech!</i> 👨🏽‍💻 </p>
