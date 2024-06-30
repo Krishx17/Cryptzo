@@ -5,17 +5,20 @@ const { Sequelize, DataTypes } = require("sequelize");
 const cors = require('cors');
 require('dotenv').config();
 
-
 const app = express();
 const port = 3009;
 
 //Middlewares
 app.use(bodyParser.json());
-app.use("/home", express.static(__dirname + "/public")); 
+app.use("/", express.static(__dirname + "/public")); 
 app.use(cors());
 
 const isProduction = process.env.NODE_ENV === 'production';
-const databaseUrl = process.env.DATABASE_URL || "postgres://postgres:Jaishridev009@localhost:5432/hodlinfo";
+const databaseUrl = process.env.DATABASE_URL || process.env.LOCAL_DATABASE_URL;
+
+console.log(databaseUrl);
+console.log(process.env.DATABASE_URL);
+console.log(process.env.LOCAL_DATABASE_URL);
 
 const sequelize = new Sequelize(databaseUrl, {
   dialect: 'postgres',

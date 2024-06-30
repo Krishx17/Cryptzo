@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const fetchAndRender = async () => {
     try {
-      const response = await fetch("/api/tickers");
+      const response = await fetch("http://localhost:3009/api/tickers");
       // console.log(response)
       if (!response.ok) {
         throw new Error(`HTTP error! status ${response.status}`);
