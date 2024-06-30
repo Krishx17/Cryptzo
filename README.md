@@ -12,6 +12,8 @@ Link : https://quadb-tech-node.onrender.com
 
 <a href="https://quadb-tech-node.onrender.com"><img src="https://raw.githubusercontent.com/Krishx17/License-Certifications/main/Laptop-viewport.png" /></a>
 
+Hodlinfo site : get all the crypto related information at one place, buy and sell crypto with ease. The platform uses the backend to fetch data from the wazirax API it then stores it into the Database, then fetches the updated data from the database every 60 seconds to render the frontend with updated data. The platform has been deployed on render and the PostgreSQL being deployed on NeonDB. 
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
