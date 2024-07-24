@@ -1,4 +1,4 @@
-<h1 align="center">QuadB Tech HODLINFO 🧮🚀
+<h1 align="center">HODLINFO 🧮🚀
 </h1>
 <p align="center"><i>Now get all the crypto related information on a single platform</i></p>
 
